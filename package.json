@@ -1,0 +1,25 @@
+{
+  "name": "ExpressWithMongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuruPrasadVns/ExpressWithMongo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuruPrasadVns/ExpressWithMongo/issues"
+  },
+  "homepage": "https://github.com/GuruPrasadVns/ExpressWithMongo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "mongoose": "^6.0.7"
+  }
+}
