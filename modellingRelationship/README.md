@@ -164,4 +164,28 @@
 
 ### For removing the all the authors we can use the $unset method. But for removing the individual author we can use the following method
 
+## Transactions
 
+### npm library fawn can be used to perform transactions. Refer code of rental routes to see how to use fawn.
+
+## ObjectID
+
+### In ObjectID we have 24 characters and each 2 characters represent a byte.So, essentially we have 12 bytes to identify a document uniquely in the MongoDB.
+
+#### firt 4 bytes : represent a timestamp : Time when the document was created so there is no need to create any column like createdAt because timestamp is included in objectId. By the same token if you want to sort your documents based on the creation time you can simply sort them by their objectid property.
+
+#### next 3 bytes : reprsents the machine identifier. Means two different machines we have two different identifier.
+
+#### next 2 bytes : represnts the process identifier.
+
+#### last 3 bytes : represnts the counter. So, If you are in the same machine, in the same process at the same timestamp but generates two different document the counter bytes will be different. Having said that there are very very less chance that you are generated same objectId for two different document.
+
+#### refre objectId.js for code.
+
+## Validating Object Id
+
+### npm i joi-objectid
+
+### Joi.objectId = require('joi-objectid')(Joi);
+
+### customerId = Joi.objectId().required()
